@@ -26,7 +26,7 @@ export default function ChooseWorkout({ navigation }) {
 
         <TouchableOpacity
           style={styles.circleButton}
-          onPress={() => navigation.navigate("MoodWorkout")}
+          onPress={() => navigation.navigate("ChooseMood")}
         >
           <Text style={styles.buttonText}>Workout based on Mood</Text>
         </TouchableOpacity>

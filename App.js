@@ -8,7 +8,16 @@ import SignupScreen2 from "./screens/SignupScreen2";
 import HomeScreen from "./screens/HomeScreen";
 import ChooseWorkout from "./screens/ChooseWorkout";
 import LoginInfoScreen from "./screens/LoginInfoScreen";
-
+import ChooseMood from "./screens/ChooseMood";
+import Anger from "./screens/Anger";
+import AngerJS from "./screens/AngerJS";
+import JumpSquatInfo from "./screens/JumpSquatInfo";
+import AngerL from "./screens/AngerL";
+import LungesInfo from "./screens/LungesInfo";
+import AngerPP from "./screens/AngerPP";
+import PPInfo from "./screens/PPInfo";
+import AngerJJ from "./screens/AngerJJ";
+import JJInfo from "./screens/JJInfo";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -24,6 +33,16 @@ export default function App() {
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="ChooseWorkout" component={ChooseWorkout} />
         <Stack.Screen name="LoginInfo" component={LoginInfoScreen} />
+        <Stack.Screen name="ChooseMood" component={ChooseMood} />
+        <Stack.Screen name="Anger" component={Anger} />
+        <Stack.Screen name="AngerJS" component={AngerJS} />
+        <Stack.Screen name="JumpSquatInfo" component={JumpSquatInfo} />
+        <Stack.Screen name="AngerL" component={AngerL} />
+        <Stack.Screen name="LungesInfo" component={LungesInfo} />
+        <Stack.Screen name="AngerPP" component={AngerPP} />
+        <Stack.Screen name="PPInfo" component={PPInfo} />
+        <Stack.Screen name="AngerJJ" component={AngerJJ} />
+        <Stack.Screen name="JJInfo" component={JJInfo} />
       </Stack.Navigator>
     </NavigationContainer>
   );
