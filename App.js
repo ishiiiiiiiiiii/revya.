@@ -28,6 +28,9 @@ import TDInfo from "./screens/TDInfo";
 import HappySP from "./screens/HappySP";
 import SPInfo from "./screens/SPInfo";
 import RegularWorkout from "./screens/RegularWorkout";
+import RWJog from "./screens/RWJog";
+import RWBSquat from "./screens/RWBSquat";
+import RWBSInfo from "./screens/RWBSInfo";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -63,6 +66,9 @@ export default function App() {
         <Stack.Screen name="HappySP" component={HappySP} />
         <Stack.Screen name="SPInfo" component={SPInfo} />
         <Stack.Screen name="RegularWorkout" component={RegularWorkout} />
+        <Stack.Screen name="RWJog" component={RWJog} />
+        <Stack.Screen name="RWBSquat" component={RWBSquat} />
+        <Stack.Screen name="RWBSInfo" component={RWBSInfo} />
       </Stack.Navigator>
     </NavigationContainer>
   );

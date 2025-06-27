@@ -19,7 +19,7 @@ export default function RegularWorkout({ navigation }) {
         <Text style={styles.heading}>Regular Workout Exercises</Text>
 
         <Text style={styles.exercise}>
-          1. March or Jog in Place —{" "}
+          1. Knee raise Jog —{" "}
           <Text style={styles.subheading}>“Warm-Up Engine”{"\n"}</Text>
           <Text style={styles.why}>Why: </Text>
           <Text style={styles.context}>
@@ -85,7 +85,7 @@ export default function RegularWorkout({ navigation }) {
 
         <TouchableOpacity
           style={styles.startButton}
-          onPress={() => navigation.navigate("ChooseWorkout")}
+          onPress={() => navigation.navigate("RWJog")}
         >
           <Text style={styles.startText}>START</Text>
         </TouchableOpacity>
