@@ -24,6 +24,8 @@ export default function ChooseMood({ navigation }) {
 
     if (mood === "Anger") {
       navigation.navigate("Anger");
+    } else if (mood === "Happiness") {
+      navigation.navigate("Happy");
     } else {
       navigation.navigate("Home");
     }

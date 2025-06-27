@@ -18,6 +18,16 @@ import AngerPP from "./screens/AngerPP";
 import PPInfo from "./screens/PPInfo";
 import AngerJJ from "./screens/AngerJJ";
 import JJInfo from "./screens/JJInfo";
+import Happy from "./screens/Happy";
+import HappyCS from "./screens/HappyCS";
+import CSInfo from "./screens/CSInfo";
+import HappyKJ from "./screens/HappyKJ";
+import KJInfo from "./screens/KJInfo";
+import Happytd from "./screens/Happytd";
+import TDInfo from "./screens/TDInfo";
+import HappySP from "./screens/HappySP";
+import SPInfo from "./screens/SPInfo";
+import RegularWorkout from "./screens/RegularWorkout";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -43,6 +53,16 @@ export default function App() {
         <Stack.Screen name="PPInfo" component={PPInfo} />
         <Stack.Screen name="AngerJJ" component={AngerJJ} />
         <Stack.Screen name="JJInfo" component={JJInfo} />
+        <Stack.Screen name="Happy" component={Happy} />
+        <Stack.Screen name="HappyCS" component={HappyCS} />
+        <Stack.Screen name="CSInfo" component={CSInfo} />
+        <Stack.Screen name="HappyKJ" component={HappyKJ} />
+        <Stack.Screen name="KJInfo" component={KJInfo} />
+        <Stack.Screen name="Happytd" component={Happytd} />
+        <Stack.Screen name="TDInfo" component={TDInfo} />
+        <Stack.Screen name="HappySP" component={HappySP} />
+        <Stack.Screen name="SPInfo" component={SPInfo} />
+        <Stack.Screen name="RegularWorkout" component={RegularWorkout} />
       </Stack.Navigator>
     </NavigationContainer>
   );
