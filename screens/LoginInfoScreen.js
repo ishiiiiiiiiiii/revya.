@@ -14,7 +14,7 @@ export default function LoginInfoScreen({ navigation }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://192.168.1.8:5000/latestuser")
+    fetch("http://192.168.0.122:5000/api/users/latest")
       .then((res) => {
         if (!res.ok) {
           throw new Error("Network response was not ok");
@@ -44,7 +44,7 @@ export default function LoginInfoScreen({ navigation }) {
 
   return (
     <ImageBackground
-      source={require("../assets/bgnew.png")} // 🔁 Make sure the path is correct
+      source={require("../assets/bgnew.png")}
       style={styles.background}
       resizeMode="cover"
     >
@@ -103,14 +103,14 @@ const styles = StyleSheet.create({
   },
   infoBox: {
     marginBottom: 40,
-    backgroundColor: "rgba(255, 255, 255, 0.6)", // Optional: remove or reduce for full image exposure
+    backgroundColor: "rgba(255, 255, 255, 0.6)",
     borderRadius: 10,
     padding: 10,
   },
   infoText: {
     fontSize: 18,
     marginBottom: 8,
-    color: "#000", // Ensure text is visible on your background
+    color: "#000",
   },
   nextButton: {
     backgroundColor: "#007AFF",

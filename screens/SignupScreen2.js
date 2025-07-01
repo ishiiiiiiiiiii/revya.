@@ -34,13 +34,27 @@ export default function SignupScreen2({ route, navigation }) {
   };
 
   const handleSubmit = async () => {
-    const fullData = { ...userData, goal: [goal], restrictions };
+    if (!goal) {
+      Alert.alert("Validation Error", "Please select a goal.");
+      return;
+    }
+
+    const fullData = {
+      ...userData,
+      goal: [goal],
+      restrictions,
+    };
+
+    console.log("📦 Sending to backend:", fullData);
 
     try {
-      const res = await axios.post("http://192.168.1.8:5000/signup", fullData);
-      Alert.alert("Success", res.data.message);
-      navigation.navigate("Home"); // Navigate to HomeScreen after saving
+      const res = await axios.post("http://192.168.0.122:5000/api/users/add", fullData);
+
+      console.log("✅ Backend Response:", res.data);
+      Alert.alert("Success", res.data.message || "User saved successfully");
+      navigation.navigate("LoginInfo");
     } catch (error) {
+      console.error("❌ Backend Error:", error);
       Alert.alert("Error", "Failed to save data.");
     }
   };
@@ -76,9 +90,7 @@ export default function SignupScreen2({ route, navigation }) {
             onPress={() => toggleRestriction(option)}
           >
             <View style={styles.checkbox}>
-              {restrictions.includes(option) && (
-                <View style={styles.checkedBox} />
-              )}
+              {restrictions.includes(option) && <View style={styles.checkedBox} />}
             </View>
             <Text style={styles.optionText}>{option}</Text>
           </TouchableOpacity>
