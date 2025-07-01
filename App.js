@@ -31,6 +31,10 @@ import RegularWorkout from "./screens/RegularWorkout";
 import RWJog from "./screens/RWJog";
 import RWBSquat from "./screens/RWBSquat";
 import RWBSInfo from "./screens/RWBSInfo";
+import IntakeTracker from "./screens/IntakeTracker";
+import IntakeSummary from "./screens/IntakeSummary";
+import WeeklyGraph from "./screens/WeeklyGraph";
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -69,6 +73,9 @@ export default function App() {
         <Stack.Screen name="RWJog" component={RWJog} />
         <Stack.Screen name="RWBSquat" component={RWBSquat} />
         <Stack.Screen name="RWBSInfo" component={RWBSInfo} />
+        <Stack.Screen name="IntakeTracker" component={IntakeTracker} />
+        <Stack.Screen name="IntakeSummary" component={IntakeSummary} />
+        <Stack.Screen name="WeeklyGraph" component={WeeklyGraph} />
       </Stack.Navigator>
     </NavigationContainer>
   );
