@@ -11,23 +11,6 @@ import ChooseMood from "./screens/ChooseMood";
 import Anger from "./screens/Anger";
 import AngerJS from "./screens/AngerJS";
 import JumpSquatInfo from "./screens/JumpSquatInfo"; 
-import Energy from './screens/Energy';
-import EnergyBwSquats from "./screens/EnergyBwSquats";
-import BwSquatInfo from "./screens/BwSquatInfo";
-import EnergyCrunches from "./screens/EnergyCrunches";
-import CrunchesInfo from "./screens/CrunchesInfo";
-import EnergyPlanks from "./screens/EnergyPlanks";
-import PlanksInfo from "./screens/PlanksInfo";
-import DoubtWallsit from "./screens/DoubtWallsit";
-import WallsitInfo from "./screens/WallsitInfo";
-import DoubtPlankhold from "./screens/DoubtPlankhold";
-import PlankholdInfo from "./screens/PlankholdInfo";
-import DoubtSlowsquats from "./screens/DoubtSlowsquats";
-import SlowsquatsInfo from "./screens/SlowsquatsInfo";
-import DoubtPushup from "./screens/DoubtPushup";
-import PushupInfo from "./screens/PushupInfo";
-
-import JumpSquatInfo from "./screens/JumpSquatInfo";
 import AngerL from "./screens/AngerL";
 import LungesInfo from "./screens/LungesInfo";
 import AngerPP from "./screens/AngerPP";
@@ -50,8 +33,6 @@ import RWBSInfo from "./screens/RWBSInfo";
 import IntakeTracker from "./screens/IntakeTracker";
 import IntakeSummary from "./screens/IntakeSummary";
 import WeeklyGraph from "./screens/WeeklyGraph";
-
->>>>>>> 9c852a4c6eddea5aad92edc5483fa2818b92f493
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -68,22 +49,6 @@ export default function App() {
         <Stack.Screen name="Anger" component={Anger} />
         <Stack.Screen name="AngerJS" component={AngerJS} />
         <Stack.Screen name="JumpSquatInfo" component={JumpSquatInfo} />
-
-        <Stack.Screen name="Energy" component={Energy} />
-        <Stack.Screen name="EnergyBwSquats" component={EnergyBwSquats} />
-        <Stack.Screen name="BwSquatInfo" component={BwSquatInfo} />
-        <Stack.Screen name="EnergyCrunches" component={EnergyCrunches} />
-        <Stack.Screen name="CrunchesInfo" component={CrunchesInfo} />
-        <Stack.Screen name="EnergyPlanks" component={EnergyPlanks} />
-        <Stack.Screen name="PlanksInfo" component={PlanksInfo} />
-        <Stack.Screen name="DoubtWallsit" component={DoubtWallsit} />
-        <Stack.Screen name="WallsitInfo" component={WallsitInfo} />
-        <Stack.Screen name="DoubtPlankhold" component={DoubtPlankhold} />
-        <Stack.Screen name="PlankholdInfo" component={PlankholdInfo} />
-        <Stack.Screen name="DoubtSlowsquats" component={DoubtSlowsquats} />
-        <Stack.Screen name="SlowsquatsInfo" component={SlowsquatsInfo} />
-        <Stack.Screen name="DoubtPushup" component={DoubtPushup} />
-        <Stack.Screen name="PushupInfo" component={PushupInfo} />
         <Stack.Screen name="AngerL" component={AngerL} />
         <Stack.Screen name="LungesInfo" component={LungesInfo} />
         <Stack.Screen name="AngerPP" component={AngerPP} />
@@ -106,7 +71,6 @@ export default function App() {
         <Stack.Screen name="IntakeTracker" component={IntakeTracker} />
         <Stack.Screen name="IntakeSummary" component={IntakeSummary} />
         <Stack.Screen name="WeeklyGraph" component={WeeklyGraph} />
->>>>>>> 9c852a4c6eddea5aad92edc5483fa2818b92f493
       </Stack.Navigator>
     </NavigationContainer>
   );
