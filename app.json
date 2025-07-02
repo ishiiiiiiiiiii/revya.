@@ -1,7 +1,12 @@
 {
   "expo": {
+<<<<<<< HEAD
     "name": "trialapp",
     "slug": "trialapp",
+=======
+    "name": "revya",
+    "slug": "revya",
+>>>>>>> 9c42552bfdb3dda43774128269cd1dc0daca299e
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

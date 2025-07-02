@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "trialapp",
+=======
+  "name": "revya",
+>>>>>>> 9c42552bfdb3dda43774128269cd1dc0daca299e
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -9,6 +13,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@expo/metro-runtime": "~5.0.4",
     "@react-native-picker/picker": "^2.11.1",
     "@react-navigation/native": "^7.1.11",
@@ -26,13 +31,26 @@
     "react-dom": "19.0.0",
     "react-native": "0.79.4",
     "react-native-chart-kit": "^6.12.0",
+=======
+    "@react-navigation/native": "^7.1.10",
+    "@react-navigation/native-stack": "^7.3.14",
+    "expo": "~53.0.11",
+    "expo-status-bar": "~2.2.3",
+    "lottie-react-native": "7.2.2",
+    "react": "19.0.0",
+    "react-native": "0.79.3",
+>>>>>>> 9c42552bfdb3dda43774128269cd1dc0daca299e
     "react-native-gesture-handler": "~2.24.0",
     "react-native-reanimated": "~3.17.4",
     "react-native-safe-area-context": "5.4.0",
     "react-native-screens": "~4.11.1",
+<<<<<<< HEAD
     "react-native-snap-carousel": "^3.9.1",
     "react-native-svg": "^15.12.0",
     "react-native-web": "^0.20.0"
+=======
+    "react-native-vector-icons": "^10.2.0"
+>>>>>>> 9c42552bfdb3dda43774128269cd1dc0daca299e
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
