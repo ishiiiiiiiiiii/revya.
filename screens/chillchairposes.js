@@ -7,38 +7,35 @@ import {
   ScrollView,
 } from "react-native";
 
-export default function LungesInfo() {
+export default function chillchairposes() {
   return (
     <ImageBackground
-      source={require("../assets/angerbg.png")}
+      source={require("../assets/chillbg.png")}
       style={styles.background}
       resizeMode="cover"
     >
       <ScrollView contentContainerStyle={styles.container}>
-        <Text style={styles.mainHeading}>✅ How to Do Lunges</Text>
+        <Text style={styles.mainHeading}>✅ How to Do Chair Pose</Text>
 
         <Text style={styles.listItem}>
-          1. Take a big step forward with one leg.
+          1. Inhale, raise arms overhead.
         </Text>
         <Text style={styles.listItem}>
-          2. Bend both knees to 90°, back knee hovers just above the ground.
-          Keep it above the ankle, not past toes.
+          2. Exhale, bend knees, sitting hips back like a chair.
         </Text>
         <Text style={styles.listItem}>
-          3. Press through the front heel to return to starting position.
+          3. Keep weight in heels, chest lifted.
         </Text>
         <Text style={styles.listItem}>
-          4. Do all reps on one leg, then switch.
+          4. Hold and breathe.
         </Text>
 
         <Text style={styles.mistakeHeading}>❌ Common Mistakes</Text>
 
-        <Text style={styles.listItem}>- Front knee going past toes</Text>
-        <Text style={styles.listItem}>- Back knee touching the floor</Text>
-        <Text style={styles.listItem}>- Leaning forward or arching back</Text>
-        <Text style={styles.listItem}>
-          - Feet too close together (lose balance)
-        </Text>
+        <Text style={styles.listItem}>- Knees going past toes</Text>
+        <Text style={styles.listItem}>- Lifting heels off ground</Text>
+        <Text style={styles.listItem}>- Arching back</Text>
+        
       </ScrollView>
     </ImageBackground>
   );

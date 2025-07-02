@@ -14,6 +14,7 @@ export default function ChooseMood({ navigation }) {
     { label: "Stress", image: require("../assets/stress2.png") },
     { label: "Happiness", image: require("../assets/happy.png") },
     { label: "Doubt", image: require("../assets/doubt2.png") },
+    { label: "Anxiety", image: require("../assets/anxiety2.png") },
     { label: "Chill", image: require("../assets/chill2.png") },
     { label: "Energetic", image: require("../assets/energy2.png") },
   ];
@@ -25,8 +26,18 @@ export default function ChooseMood({ navigation }) {
       navigation.navigate("Anger");
     } else if (mood === "Happiness") {
       navigation.navigate("Happy");
+    } else if (mood === "Stress") {
+      navigation.navigate("Stress");
+    } else if (mood === "Doubt") {
+      navigation.navigate("Doubt");
+    } else if (mood === "Anxiety") {
+      navigation.navigate("Anxiety");
+    } else if (mood === "Chill") {
+      navigation.navigate("Chill");
+    } else if (mood === "Energetic") {
+      navigation.navigate("Energy");
     } else {
-      navigation.navigate("Home");
+      navigation.navigate("Home"); // fallback
     }
   };
 

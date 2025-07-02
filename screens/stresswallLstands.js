@@ -7,38 +7,31 @@ import {
   ScrollView,
 } from "react-native";
 
-export default function LungesInfo() {
+export default function stresswallLstands() {
   return (
     <ImageBackground
-      source={require("../assets/angerbg.png")}
+      source={require("../assets/stressbg.png")}
       style={styles.background}
       resizeMode="cover"
     >
       <ScrollView contentContainerStyle={styles.container}>
-        <Text style={styles.mainHeading}>✅ How to Do Lunges</Text>
+        <Text style={styles.mainHeading}>✅ How to Do Wall L Stands</Text>
 
         <Text style={styles.listItem}>
-          1. Take a big step forward with one leg.
+          1. Face away from the wall, place hands on the floor.
         </Text>
         <Text style={styles.listItem}>
-          2. Bend both knees to 90°, back knee hovers just above the ground.
-          Keep it above the ankle, not past toes.
+          2. Walk feet up the wall and adjust hands until hips are over shoulders, legs straight out.
         </Text>
         <Text style={styles.listItem}>
-          3. Press through the front heel to return to starting position.
+          3. Form a clean 90° angle and hold.
         </Text>
-        <Text style={styles.listItem}>
-          4. Do all reps on one leg, then switch.
-        </Text>
-
         <Text style={styles.mistakeHeading}>❌ Common Mistakes</Text>
 
-        <Text style={styles.listItem}>- Front knee going past toes</Text>
-        <Text style={styles.listItem}>- Back knee touching the floor</Text>
-        <Text style={styles.listItem}>- Leaning forward or arching back</Text>
-        <Text style={styles.listItem}>
-          - Feet too close together (lose balance)
-        </Text>
+        <Text style={styles.listItem}>- Overarching the back.</Text>
+        <Text style={styles.listItem}>- Hands too far from the wall.</Text>
+        <Text style={styles.listItem}>- Not warming up shoulders/wrists.</Text>
+        
       </ScrollView>
     </ImageBackground>
   );

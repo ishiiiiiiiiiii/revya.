@@ -7,38 +7,33 @@ import {
   ScrollView,
 } from "react-native";
 
-export default function LungesInfo() {
+export default function stresswallsquats() {
   return (
     <ImageBackground
-      source={require("../assets/angerbg.png")}
+      source={require("../assets/stressbg.png")}
       style={styles.background}
       resizeMode="cover"
     >
       <ScrollView contentContainerStyle={styles.container}>
-        <Text style={styles.mainHeading}>✅ How to Do Lunges</Text>
+        <Text style={styles.mainHeading}>✅ How to Do Wall Squats</Text>
 
         <Text style={styles.listItem}>
-          1. Take a big step forward with one leg.
+          1. Stand with your back against a wall, feet shoulder-width apart and about 2 feet in front of you.
         </Text>
         <Text style={styles.listItem}>
-          2. Bend both knees to 90°, back knee hovers just above the ground.
-          Keep it above the ankle, not past toes.
+          2. Slide down until your thighs are parallel to the floor.
         </Text>
         <Text style={styles.listItem}>
-          3. Press through the front heel to return to starting position.
+          3. Keep your back flat against the wall and hold the position.
         </Text>
-        <Text style={styles.listItem}>
-          4. Do all reps on one leg, then switch.
-        </Text>
+        
 
         <Text style={styles.mistakeHeading}>❌ Common Mistakes</Text>
 
-        <Text style={styles.listItem}>- Front knee going past toes</Text>
-        <Text style={styles.listItem}>- Back knee touching the floor</Text>
-        <Text style={styles.listItem}>- Leaning forward or arching back</Text>
-        <Text style={styles.listItem}>
-          - Feet too close together (lose balance)
-        </Text>
+        <Text style={styles.listItem}>- Knees going past toes (increases stress on the knees). </Text>
+        <Text style={styles.listItem}>- Hips too low or too high.</Text>
+        <Text style={styles.listItem}>- Arching the lower back.</Text>
+        
       </ScrollView>
     </ImageBackground>
   );

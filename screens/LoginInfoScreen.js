@@ -14,22 +14,26 @@ export default function LoginInfoScreen({ navigation }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://192.168.0.122:5000/api/users/latest")
-      .then((res) => {
+    const fetchLatestUser = async () => {
+      try {
+        const res = await fetch("http://192.168.0.122:5000/api/users/latest");
+
         if (!res.ok) {
-          throw new Error("Network response was not ok");
+          throw new Error(`Server responded with ${res.status}`);
         }
-        return res.json();
-      })
-      .then((data) => {
+
+        const data = await res.json();
+        console.log("✅ Latest user:", data);
         setUserInfo(data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Fetch error:", err);
+      } catch (err) {
+        console.error("❌ Fetch error:", err);
         Alert.alert("Error", "Failed to load user info.");
+      } finally {
         setLoading(false);
-      });
+      }
+    };
+
+    fetchLatestUser();
   }, []);
 
   if (loading) {
@@ -50,22 +54,23 @@ export default function LoginInfoScreen({ navigation }) {
     >
       <View style={styles.container}>
         <Text style={styles.title}>Welcome Back!</Text>
+
         {userInfo ? (
           <View style={styles.infoBox}>
-            <Text style={styles.infoText}>Name: {userInfo.name}</Text>
-            <Text style={styles.infoText}>Age: {userInfo.age}</Text>
-            <Text style={styles.infoText}>Gender: {userInfo.gender}</Text>
-            <Text style={styles.infoText}>Height: {userInfo.height}</Text>
-            <Text style={styles.infoText}>Weight: {userInfo.weight}</Text>
-            <Text style={styles.infoText}>BMI: {userInfo.bmi}</Text>
+            <Text style={styles.infoText}>Name: {userInfo.name || "N/A"}</Text>
+            <Text style={styles.infoText}>Age: {userInfo.age || "N/A"}</Text>
+            <Text style={styles.infoText}>Gender: {userInfo.gender || "N/A"}</Text>
+            <Text style={styles.infoText}>Height: {userInfo.height || "N/A"}</Text>
+            <Text style={styles.infoText}>Weight: {userInfo.weight || "N/A"}</Text>
+            <Text style={styles.infoText}>BMI: {userInfo.bmi || "N/A"}</Text>
             <Text style={styles.infoText}>
-              Goals: {userInfo.goal?.join(", ")}
+              Goals: {Array.isArray(userInfo.goal) ? userInfo.goal.join(", ") : "N/A"}
             </Text>
             <Text style={styles.infoText}>
               Food Restrictions:{" "}
               {Array.isArray(userInfo.restrictions)
                 ? userInfo.restrictions.join(", ")
-                : userInfo.restrictions}
+                : "N/A"}
             </Text>
           </View>
         ) : (

@@ -7,37 +7,39 @@ import {
   ScrollView,
 } from "react-native";
 
-export default function LungesInfo() {
+export default function regularinclinepushup() {
   return (
     <ImageBackground
-      source={require("../assets/angerbg.png")}
+      source={require("../assets/happybg.png")}
       style={styles.background}
       resizeMode="cover"
     >
       <ScrollView contentContainerStyle={styles.container}>
-        <Text style={styles.mainHeading}>✅ How to Do Lunges</Text>
+        <Text style={styles.mainHeading}>✅ How to Do Incline PushUps</Text>
 
         <Text style={styles.listItem}>
-          1. Take a big step forward with one leg.
+          1. Place your hands shoulder-width apart on a stable elevated surface (like a bench).
         </Text>
         <Text style={styles.listItem}>
-          2. Bend both knees to 90°, back knee hovers just above the ground.
-          Keep it above the ankle, not past toes.
+          2. Walk your feet back until your body is in a straight line.
         </Text>
         <Text style={styles.listItem}>
-          3. Press through the front heel to return to starting position.
+          3. Lower your chest toward the surface by bending your elbows.
         </Text>
         <Text style={styles.listItem}>
-          4. Do all reps on one leg, then switch.
+          4. Keep your core tight and back straight.
         </Text>
-
+        <Text style={styles.listItem}>
+          5. Push through your palms to return to the starting position.
+        </Text>
         <Text style={styles.mistakeHeading}>❌ Common Mistakes</Text>
 
-        <Text style={styles.listItem}>- Front knee going past toes</Text>
-        <Text style={styles.listItem}>- Back knee touching the floor</Text>
-        <Text style={styles.listItem}>- Leaning forward or arching back</Text>
         <Text style={styles.listItem}>
-          - Feet too close together (lose balance)
+          - Knees caving inward (valgus collapse).
+        </Text>
+        <Text style={styles.listItem}>- Not going low enough.</Text>
+        <Text style={styles.listItem}>
+          - Flaring elbows too wide.
         </Text>
       </ScrollView>
     </ImageBackground>
@@ -72,7 +74,7 @@ const styles = StyleSheet.create({
   },
   listItem: {
     fontSize: 16,
-    color: "#fff",
+    color: "#000",
     marginBottom: 8,
   },
 });

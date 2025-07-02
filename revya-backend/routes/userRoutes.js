@@ -1,11 +1,7 @@
-// routes/userRoutes.js
 const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
 
-// @route   POST /api/users/add
-// @desc    Save user signup data
-// @access  Public
 router.post('/add', async (req, res) => {
   try {
     const user = new User(req.body);
@@ -18,10 +14,7 @@ router.post('/add', async (req, res) => {
   }
 });
 
-// @route   GET /api/users/latest
-// @desc    Fetch the latest registered user
-// @access  Public
-router.get('/latest', async (req, res) => {
+router.get('/users/latest', async (req, res) => {
   try {
     const latestUser = await User.findOne().sort({ createdAt: -1 });
     if (!latestUser) {
@@ -35,6 +28,3 @@ router.get('/latest', async (req, res) => {
 });
 
 module.exports = router;
-
-
-

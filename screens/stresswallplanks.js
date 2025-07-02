@@ -7,38 +7,31 @@ import {
   ScrollView,
 } from "react-native";
 
-export default function LungesInfo() {
+export default function stresswallplanks() {
   return (
     <ImageBackground
-      source={require("../assets/angerbg.png")}
+      source={require("../assets/stressbg.png")}
       style={styles.background}
       resizeMode="cover"
     >
       <ScrollView contentContainerStyle={styles.container}>
-        <Text style={styles.mainHeading}>✅ How to Do Lunges</Text>
+        <Text style={styles.mainHeading}>✅ How to Do Wall Planks</Text>
 
         <Text style={styles.listItem}>
-          1. Take a big step forward with one leg.
+          1. Place hands on the wall or floor (depending on variation).
         </Text>
         <Text style={styles.listItem}>
-          2. Bend both knees to 90°, back knee hovers just above the ground.
-          Keep it above the ankle, not past toes.
+          2. Align your body into a straight line from head to heels.
         </Text>
         <Text style={styles.listItem}>
-          3. Press through the front heel to return to starting position.
-        </Text>
-        <Text style={styles.listItem}>
-          4. Do all reps on one leg, then switch.
+          3. Engage your core and hold for 20–60 seconds.
         </Text>
 
         <Text style={styles.mistakeHeading}>❌ Common Mistakes</Text>
 
-        <Text style={styles.listItem}>- Front knee going past toes</Text>
-        <Text style={styles.listItem}>- Back knee touching the floor</Text>
-        <Text style={styles.listItem}>- Leaning forward or arching back</Text>
-        <Text style={styles.listItem}>
-          - Feet too close together (lose balance)
-        </Text>
+        <Text style={styles.listItem}>- Head pointing up or down.</Text>
+        <Text style={styles.listItem}>- Not engaging the core.</Text>
+        
       </ScrollView>
     </ImageBackground>
   );

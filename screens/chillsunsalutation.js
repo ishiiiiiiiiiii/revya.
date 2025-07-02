@@ -7,35 +7,37 @@ import {
   ScrollView,
 } from "react-native";
 
-export default function LungesInfo() {
+export default function chillsunsalutation() {
   return (
     <ImageBackground
-      source={require("../assets/angerbg.png")}
+      source={require("../assets/chillbg.png")}
       style={styles.background}
       resizeMode="cover"
     >
       <ScrollView contentContainerStyle={styles.container}>
-        <Text style={styles.mainHeading}>✅ How to Do Lunges</Text>
+        <Text style={styles.mainHeading}>✅ How to Do Sun Salutations</Text>
 
         <Text style={styles.listItem}>
-          1. Take a big step forward with one leg.
+          1. Start in Mountain Pose (Tadasana).
+          
         </Text>
         <Text style={styles.listItem}>
-          2. Bend both knees to 90°, back knee hovers just above the ground.
-          Keep it above the ankle, not past toes.
+          2. Inhale, raise arms overhead.Exhale, fold forward.
         </Text>
         <Text style={styles.listItem}>
-          3. Press through the front heel to return to starting position.
+          3. Inhale, lift halfway.Exhale, step or jump to plank, then lower to Chaturanga.
         </Text>
         <Text style={styles.listItem}>
-          4. Do all reps on one leg, then switch.
+          4. Inhale, Upward-Facing Dog.Exhale, Downward-Facing Dog.
         </Text>
-
+        <Text style={styles.listItem}>
+          4. Inhale, step forward.
+        </Text>
         <Text style={styles.mistakeHeading}>❌ Common Mistakes</Text>
 
-        <Text style={styles.listItem}>- Front knee going past toes</Text>
-        <Text style={styles.listItem}>- Back knee touching the floor</Text>
-        <Text style={styles.listItem}>- Leaning forward or arching back</Text>
+        <Text style={styles.listItem}>- Holding your breath (instead of syncing with movement).</Text>
+        <Text style={styles.listItem}>- Arching the lower back in Upward Dog (strain risk).</Text>
+        <Text style={styles.listItem}>- Rushing through without proper form.</Text>
         <Text style={styles.listItem}>
           - Feet too close together (lose balance)
         </Text>

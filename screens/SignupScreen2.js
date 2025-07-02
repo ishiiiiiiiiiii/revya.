@@ -1,4 +1,3 @@
-// screens/SignupScreen2.js
 import React, { useState } from "react";
 import {
   View,
@@ -10,6 +9,7 @@ import {
   ImageBackground,
 } from "react-native";
 import axios from "axios";
+import { API_BASE_URL } from "../config"; // ✅ Import your base URL here
 
 export default function SignupScreen2({ route, navigation }) {
   const { userData } = route.params;
@@ -48,14 +48,23 @@ export default function SignupScreen2({ route, navigation }) {
     console.log("📦 Sending to backend:", fullData);
 
     try {
-      const res = await axios.post("http://192.168.0.122:5000/api/users/add", fullData);
+      // ✅ Matches your Express: app.use('/api') + router.post('/add')
+      const res = await axios.post(`${API_BASE_URL}/api/add`, fullData);
 
-      console.log("✅ Backend Response:", res.data);
-      Alert.alert("Success", res.data.message || "User saved successfully");
+      console.log("✅ Backend Response:", res?.data);
+      Alert.alert("Success", res?.data?.message || "User saved successfully");
       navigation.navigate("LoginInfo");
     } catch (error) {
-      console.error("❌ Backend Error:", error);
-      Alert.alert("Error", "Failed to save data.");
+      if (error.response) {
+        console.error("❌ Backend Error:", error.response.data);
+        Alert.alert(
+          "Error",
+          error.response.data?.message || "Failed to save data."
+        );
+      } else {
+        console.error("❌ Network Error:", error.message);
+        Alert.alert("Network Error", error.message || "Network error");
+      }
     }
   };
 
@@ -90,7 +99,9 @@ export default function SignupScreen2({ route, navigation }) {
             onPress={() => toggleRestriction(option)}
           >
             <View style={styles.checkbox}>
-              {restrictions.includes(option) && <View style={styles.checkedBox} />}
+              {restrictions.includes(option) && (
+                <View style={styles.checkedBox} />
+              )}
             </View>
             <Text style={styles.optionText}>{option}</Text>
           </TouchableOpacity>
